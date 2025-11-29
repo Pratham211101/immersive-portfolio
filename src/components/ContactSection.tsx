@@ -3,8 +3,11 @@ import { useRef, useState } from 'react';
 import { Mail, MapPin, Send, Linkedin, Github } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 const socialLinks = [
+  { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/pratham-goswami-4a2a83228/', label: 'LinkedIn' },
   { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/pratham-goswami-4a2a83228/', label: 'LinkedIn' },
 ];
@@ -13,6 +16,8 @@ export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
