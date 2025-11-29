@@ -102,7 +102,7 @@ export default function WorkSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-32 px-6 relative">
+    <section id="work" className="py-32 px-6 relative bg-background/80 backdrop-blur-sm">
       {/* Background accent */}
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px]" />
       
