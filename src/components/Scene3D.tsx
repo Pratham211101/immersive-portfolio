@@ -29,20 +29,20 @@ function FloatingShape({
 
   useFrame((state) => {
     if (meshRef.current) {
-      // Base rotation
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.2 * speed + scrollOffset * 2;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3 * speed + scrollOffset * 3;
+      // Base rotation - very subtle scroll influence
+      meshRef.current.rotation.x = state.clock.elapsedTime * 0.15 * speed + scrollOffset * 0.3;
+      meshRef.current.rotation.y = state.clock.elapsedTime * 0.2 * speed + scrollOffset * 0.4;
       
-      // Scroll-based position offset
-      const scrollY = scrollOffset * 2;
+      // Scroll-based position offset - much slower
+      const scrollY = scrollOffset * 0.3;
       meshRef.current.position.y = initialPosition.current[1] - scrollY * speed;
       
       // Mouse-based subtle movement
-      meshRef.current.position.x = initialPosition.current[0] + mousePosition.x * 0.5 * speed;
-      meshRef.current.position.z = initialPosition.current[2] + mousePosition.y * 0.3;
+      meshRef.current.position.x = initialPosition.current[0] + mousePosition.x * 0.3 * speed;
+      meshRef.current.position.z = initialPosition.current[2] + mousePosition.y * 0.15;
       
-      // Scale pulse based on scroll
-      const scalePulse = 1 + Math.sin(scrollOffset * 10) * 0.1;
+      // Scale pulse based on scroll - gentler
+      const scalePulse = 1 + Math.sin(scrollOffset * 2) * 0.05;
       meshRef.current.scale.setScalar(scale * scalePulse);
     }
   });
@@ -69,8 +69,8 @@ function FloatingShape({
           envMapIntensity={0.4}
           roughness={0.2}
           metalness={0.8}
-          distort={distort + scrollOffset * 0.2}
-          speed={2 + scrollOffset * 5}
+          distort={distort + scrollOffset * 0.05}
+          speed={2 + scrollOffset * 0.5}
         />
       </mesh>
     </Float>
@@ -158,9 +158,9 @@ function CameraController({ mousePosition }: { mousePosition: { x: number; y: nu
   const { camera } = useThree();
   
   useFrame(() => {
-    // Subtle camera movement based on mouse
-    camera.position.x = THREE.MathUtils.lerp(camera.position.x, mousePosition.x * 0.5, 0.05);
-    camera.position.y = THREE.MathUtils.lerp(camera.position.y, mousePosition.y * 0.3, 0.05);
+    // Very subtle camera movement based on mouse
+    camera.position.x = THREE.MathUtils.lerp(camera.position.x, mousePosition.x * 0.2, 0.02);
+    camera.position.y = THREE.MathUtils.lerp(camera.position.y, mousePosition.y * 0.15, 0.02);
     camera.lookAt(0, 0, 0);
   });
   
