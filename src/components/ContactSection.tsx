@@ -7,8 +7,6 @@ import emailjs from 'emailjs-com';
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/pratham-goswami-4a2a83228/', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/pratham-goswami-4a2a83228/', label: 'LinkedIn' },
 ];
 
 export default function ContactSection() {
