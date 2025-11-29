@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Work', href: '#work' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Resume' , href: 'https://drive.google.com/file/d/1QosxFewr6sMWr-Bh1r_VelGSiaWKgDQN/view' },
 ];
 
 export default function Navigation() {
@@ -23,7 +24,7 @@ export default function Navigation() {
         <div className="glass rounded-full px-6 py-3 flex items-center justify-between">
           <motion.a
             href="#home"
-            className="font-display text-xl font-bold gradient-text"
+            className="font-display text-xl font-bold gradient-text-stable"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

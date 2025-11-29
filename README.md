@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# Immersive Portfolio
 
-## Project info
+A minimal, accessible, and performance-focused personal portfolio website to showcase projects, skills, and contact information.
 
-**URL**: https://lovable.dev/projects/6939bf26-869d-4178-a8a2-44540867e0d2
+## Features
+- Responsive layout (mobile-first)
+- Project gallery with filters and project pages
+- About section with skills and timeline
+- Contact form 
+- SEO-friendly metadata and Open Graph tags
+- Performance and accessibility best practices
 
-## How can I edit this code?
+## Demo
+Replace with your live site URL:
+https://your-site.example.com
 
-There are several ways of editing your application.
+## Built with
+- HTML5, CSS3 (or Tailwind/SCSS)
+- JavaScript (Vanilla / React / Vue / Svelte)
+- Optional: Netlify, Vercel, GitHub Pages, or static hosting
+- Optional: Form handling via Formspree, Netlify Forms, or serverless function
 
-**Use Lovable**
+## Getting started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6939bf26-869d-4178-a8a2-44540867e0d2) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+Clone the repo:
+```bash
+git clone https://github.com/your-username/immersive-portfolio.git
+cd immersive-portfolio
 ```
 
-**Edit a file directly in GitHub**
+Install dependencies (if using a framework / build tool):
+```bash
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Run development server:
+```bash
+npm run dev
+# or
+npm start
+```
 
-**Use GitHub Codespaces**
+Build for production:
+```bash
+npm run build
+# serve locally to test the production build
+npm run serve
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project structure (suggested)
+```
+/
+├─ public/            # static assets, favicon, robots.txt
+├─ src/
+│  ├─ components/     # reusable UI pieces
+│  ├─ pages/          # page views (home, projects, about, contact)
+│  ├─ styles/         # global styles / theme
+│  └─ data/           # project metadata, resume details
+├─ .gitignore
+├─ package.json
+└─ README.md
+```
 
-## What technologies are used for this project?
+## Content & Customization
+- Update site metadata (title, description, social images).
+- Add projects to the data file with title, description, tech stack, links, and screenshots.
+- Customize theme colors, fonts, and layout to match personal brand.
+- Add analytics or A/B tests only after ensuring user privacy (GDPR/COPPA considerations).
 
-This project is built with:
+## Accessibility & Performance
+- Use semantic HTML and meaningful alt text.
+- Ensure keyboard navigability and visible focus states.
+- Optimize images (responsive sizes, WebP) and lazy-load when appropriate.
+- Run Lighthouse and address accessibility/performance issues.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
+- Deploy via Vercel, Netlify, GitHub Pages, or any static host.
+- For serverless contact forms, configure provider (Netlify Functions, Vercel Functions, or a third-party form service).
 
-## How can I deploy this project?
+## Contributing
+- Keep commits small and focused.
+- Open an issue before implementing large changes.
+- Submit pull requests with clear descriptions and tested changes.
 
-Simply open [Lovable](https://lovable.dev/projects/6939bf26-869d-4178-a8a2-44540867e0d2) and click on Share -> Publish.
+## License
+MIT — see LICENSE file for details.
 
-## Can I connect a custom domain to my Lovable project?
+## Contact
+Replace with your info:
+- Email: you@example.com
+- Twitter / LinkedIn: @yourhandle
+- Resume: /assets/resume.pdf
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Replace placeholder content with your personal details and projects. Keep the README synced with major changes to the site.

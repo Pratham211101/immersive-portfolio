@@ -114,6 +114,18 @@
   .text-glow {
     text-shadow: 0 0 40px hsl(var(--primary) / 0.5);
   }
+
+  .gradient-text-stable {
+  background: linear-gradient(90deg, #00c4b3, #b24fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block; /* ensures gradient applies per text */
+  
+}
+
+
 }
 
 @layer utilities {

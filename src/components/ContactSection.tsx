@@ -2,11 +2,11 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/pratham-goswami-4a2a83228/', label: 'LinkedIn' },
 ];
 
 export default function ContactSection() {
@@ -14,17 +14,32 @@ export default function ContactSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success('Message sent! I\'ll get back to you soon.');
+
+    const form = e.target as HTMLFormElement;
+
+    try {
+      await emailjs.sendForm(
+        'service_q5p45kr',    // replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID',   // replace with your template ID
+        form,
+        'YOUR_PUBLIC_KEY'     // replace with your EmailJS public key
+      );
+
+      toast.success("Message sent! I'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Oops! Something went wrong. Try again later.");
+    }
+
     setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-  };
+};
+
 
   return (
     <section id="contact" className="py-32 px-6 relative bg-background/80 backdrop-blur-sm">
@@ -54,7 +69,9 @@ export default function ContactSection() {
             transition={{ delay: 0.3 }}
           >
             Let's create something
-            <span className="gradient-text"> amazing </span>
+            <span> </span>
+            <span className="gradient-text-stable"> amazing </span>
+            <span> </span>
             together
           </motion.h2>
           
@@ -87,7 +104,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">hello@portfolio.dev</p>
+                    <p className="font-medium">goswamipratham21112001@gmail.com</p>
                   </div>
                 </div>
                 
@@ -97,7 +114,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">San Francisco, CA</p>
+                    <p className="font-medium">Bangalore, IN</p>
                   </div>
                 </div>
               </div>

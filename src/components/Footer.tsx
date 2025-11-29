@@ -10,7 +10,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          © 2024 Portfolio. Built with passion and creativity.
+          © 2025 Portfolio. Built with passion and creativity.
         </motion.p>
         
         <motion.p
@@ -19,7 +19,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          Designed & Developed with ♥
+           
         </motion.p>
       </div>
     </footer>
