@@ -1,13 +1,14 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Palette, Sparkles, Zap } from 'lucide-react';
+import { Code2, Server,Database,Cloud } from 'lucide-react';
 
 const skills = [
-  { icon: Code2, name: 'Development', description: 'React, TypeScript, Node.js, Three.js' },
-  { icon: Palette, name: 'Design', description: 'UI/UX, Figma, Motion Design' },
-  { icon: Sparkles, name: '3D & Animation', description: 'WebGL, GSAP, Framer Motion' },
-  { icon: Zap, name: 'Performance', description: 'Optimization, Accessibility, SEO' },
+  { icon: Code2, name: 'Frontend', description: 'React, JavaScript, TypeScript, Redux, Tailwind' },
+  { icon: Server, name: 'Backend', description: 'Node.js, Express, REST APIs' },
+  { icon: Database, name: 'Databases', description: 'MongoDB, MySQL' },
+  { icon: Cloud, name: 'DevOps', description: 'AWS, Docker' },
 ];
+
 
 export default function AboutSection() {
   const ref = useRef(null);
@@ -43,7 +44,8 @@ export default function AboutSection() {
               transition={{ delay: 0.3 }}
             >
               Passionate about creating
-              <span className="gradient-text"> meaningful </span>
+              <span className="gradient-text-stable"> meaningful  </span>
+              <span> </span>
               digital products
             </motion.h2>
             
@@ -54,15 +56,11 @@ export default function AboutSection() {
               transition={{ delay: 0.5 }}
             >
               <p>
-                I'm a creative developer with over 5 years of experience building 
-                web applications that not only look stunning but also deliver 
-                exceptional user experiences.
+                I'm a creative full-stack developer who loves crafting modern, responsive, and user-centric web applications.
               </p>
               <p>
-                My passion lies at the intersection of design and technology, 
-                where I bring ideas to life through clean code and thoughtful 
-                interactions. I believe the best digital experiences are those 
-                that feel intuitive and delightful.
+                I enjoy blending design and engineering to build interfaces that feel clean, smooth, and immersive.
+                As a fresher, I'm focused on strengthening my craft, shipping real projects, and continuously exploring new technologies to build scalable digital experiences.
               </p>
             </motion.div>
 
@@ -73,18 +71,18 @@ export default function AboutSection() {
               transition={{ delay: 0.7 }}
             >
               <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="font-display text-4xl font-bold gradient-text-stable">2+</div>
+                <div className="text-sm text-muted-foreground">Years Building Projects</div>
               </div>
               <div className="w-px bg-border" />
               <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="font-display text-4xl font-bold gradient-text-stable">15+</div>
+                <div className="text-sm text-muted-foreground">Github Projects</div>
               </div>
               <div className="w-px bg-border" />
               <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text">30+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="font-display text-4xl font-bold gradient-text-stable">5+</div>
+                <div className="text-sm text-muted-foreground">Live Web Apps</div>
               </div>
             </motion.div>
           </div>
