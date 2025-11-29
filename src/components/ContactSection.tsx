@@ -3,7 +3,6 @@ import { useRef, useState } from 'react';
 import { Mail, MapPin, Send, Linkedin, Github } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
-import emailjs from 'emailjs-com';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Pratham211101', label: 'GitHub' },
