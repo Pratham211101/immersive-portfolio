@@ -14,7 +14,7 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-32 px-6 relative">
+    <section id="about" className="py-32 px-6 relative bg-background/80 backdrop-blur-sm">
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[150px]" />
       

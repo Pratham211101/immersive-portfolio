@@ -1,16 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import { Suspense, lazy } from 'react';
-
-const Scene3D = lazy(() => import('./Scene3D'));
 
 export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <Suspense fallback={null}>
-        <Scene3D />
-      </Suspense>
-      
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
