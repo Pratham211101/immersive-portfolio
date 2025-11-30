@@ -138,9 +138,9 @@ export default function WorkSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-32 px-6 relative bg-background/80 backdrop-blur-sm">
+    <section id="work" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative bg-background/80 backdrop-blur-sm">
       {/* Background accent */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-[100px] sm:blur-[150px]" />
       
       <div className="max-w-7xl mx-auto" ref={ref}>
 
@@ -160,16 +160,14 @@ export default function WorkSection() {
           </motion.p>
           
           <motion.h2
-            className="font-display text-4xl md:text-5xl font-bold mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
           >
             Organizations I've
-            <span> </span>
             <span className="gradient-text-stable"> worked </span>
-            <span> </span>
-            <span>with</span>
+            with
           </motion.h2>
         </motion.div>
 
@@ -177,37 +175,35 @@ export default function WorkSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="glass p-6 rounded-3xl border border-white/10 hover:border-primary/30 transition-colors"
+          className="glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-primary/30 transition-colors"
         >
-          <div className="flex items-start justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
             <div>
-              <h3 className="font-display text-xl font-semibold flex items-center gap-2">
-                <Briefcase className="w-5 h-5 text-primary" />
-                Web Developer Intern
+              <h3 className="font-display text-lg sm:text-xl font-semibold flex items-center gap-2">
+                <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                <span>Web Developer Intern</span>
               </h3>
-              <p className="text-muted-foreground text-sm">
-                Orange Essence Technologies &middot; Jan 2025 — Apr 2025
+              <p className="text-muted-foreground text-xs sm:text-sm mt-1">
+                Orange Essence Technologies · Jan 2025 — Apr 2025
               </p>
             </div>
           </div>
 
-          <p className="mt-4 text-muted-foreground">
-            Refactored legacy REST APIs by migrating the backend from MongoDB to MySQL, improving data consistency, query performance, and overall reliability. Updated the frontend to integrate with the new API structure, ensuring seamless functionality across the platform.  
-Additionally, contributed to building responsive UI components, optimized rendering performance, and improved the overall user experience through cleaner state management and reusable component patterns.
-
+          <p className="mt-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
+            Refactored legacy REST APIs by migrating the backend from MongoDB to MySQL, improving data consistency, query performance, and overall reliability. Updated the frontend to integrate with the new API structure, ensuring seamless functionality across the platform. Additionally, contributed to building responsive UI components and improved the overall user experience through cleaner state management.
           </p>
 
           <div className="flex flex-wrap gap-2 mt-4">
-            <span className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
+            <span className="px-2 sm:px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
               React
             </span>
-            <span className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
+            <span className="px-2 sm:px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
               Tailwind
             </span>
-            <span className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
+            <span className="px-2 sm:px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
               REST APIs
             </span>
-            <span className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
+            <span className="px-2 sm:px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground">
               UI Components
             </span>
           </div>
@@ -232,14 +228,13 @@ Additionally, contributed to building responsive UI components, optimized render
           </motion.p>
           
           <motion.h2
-            className="font-display text-4xl md:text-5xl font-bold mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
           >
             Projects I've
-            <span> </span>
-            <span className="gradient-text-stable"> developed </span>
+            <span className="gradient-text-stable"> developed</span>
           </motion.h2>
           
           <motion.p
@@ -253,7 +248,7 @@ Additionally, contributed to building responsive UI components, optimized render
           </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

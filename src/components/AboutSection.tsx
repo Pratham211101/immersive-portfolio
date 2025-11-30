@@ -15,9 +15,9 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-32 px-6 relative bg-background/80 backdrop-blur-sm">
+    <section id="about" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative bg-background/80 backdrop-blur-sm">
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[150px]" />
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-accent/10 rounded-full blur-[100px] sm:blur-[150px]" />
       
       <div className="max-w-7xl mx-auto" ref={ref}>
         <motion.div
@@ -38,14 +38,13 @@ export default function AboutSection() {
             </motion.p>
             
             <motion.h2
-              className="font-display text-4xl md:text-5xl font-bold mb-6"
+              className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
             >
               Passionate about creating
-              <span className="gradient-text-stable"> meaningful  </span>
-              <span> </span>
+              <span className="gradient-text-stable"> meaningful </span>
               digital products
             </motion.h2>
             
@@ -65,24 +64,24 @@ export default function AboutSection() {
             </motion.div>
 
             <motion.div
-              className="mt-8 flex gap-4"
+              className="mt-8 flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 }}
             >
-              <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text-stable">2+</div>
-                <div className="text-sm text-muted-foreground">Years Building Projects</div>
+              <div className="text-center min-w-[80px]">
+                <div className="font-display text-3xl sm:text-4xl font-bold gradient-text-stable">2+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Years Building</div>
               </div>
-              <div className="w-px bg-border" />
-              <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text-stable">15+</div>
-                <div className="text-sm text-muted-foreground">Github Projects</div>
+              <div className="hidden sm:block w-px bg-border" />
+              <div className="text-center min-w-[80px]">
+                <div className="font-display text-3xl sm:text-4xl font-bold gradient-text-stable">15+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Github Projects</div>
               </div>
-              <div className="w-px bg-border" />
-              <div className="text-center">
-                <div className="font-display text-4xl font-bold gradient-text-stable">5+</div>
-                <div className="text-sm text-muted-foreground">Live Web Apps</div>
+              <div className="hidden sm:block w-px bg-border" />
+              <div className="text-center min-w-[80px]">
+                <div className="font-display text-3xl sm:text-4xl font-bold gradient-text-stable">5+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Live Web Apps</div>
               </div>
             </motion.div>
           </div>
