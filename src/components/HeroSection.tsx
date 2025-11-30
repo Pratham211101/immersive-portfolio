@@ -8,7 +8,7 @@
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
         
-        <div className="relative text-center px-6 max-w-5xl mx-auto" style={{ zIndex: 10 }}>
+        <div className="relative text-center px-4 sm:px-6 max-w-5xl mx-auto" style={{ zIndex: 10 }}>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@
               Pratham Goswami
             </motion.h2>
             
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               <motion.span
                 className="block"
                 initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@
             </h1>
             
             <motion.p
-              className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10"
+              className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 px-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -78,7 +78,7 @@
             >
               <motion.a
                 href="#work"
-                className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all glow-primary"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all glow-primary text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -86,7 +86,7 @@
               </motion.a>
               <motion.a
                 href="#contact"
-                className="px-8 py-4 glass rounded-full font-medium hover:bg-card/60 transition-all"
+                className="px-6 sm:px-8 py-3 sm:py-4 glass rounded-full font-medium hover:bg-card/60 transition-all text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
