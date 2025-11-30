@@ -44,7 +44,9 @@ export default function AboutSection() {
               transition={{ delay: 0.3 }}
             >
               Passionate about creating
+              <span> </span>
               <span className="gradient-text-stable"> meaningful </span>
+              <span> </span>
               digital products
             </motion.h2>
             

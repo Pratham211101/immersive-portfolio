@@ -166,7 +166,9 @@ export default function WorkSection() {
             transition={{ delay: 0.3 }}
           >
             Organizations I've
+            <span> </span>
             <span className="gradient-text-stable"> worked </span>
+            <span> </span>
             with
           </motion.h2>
         </motion.div>
@@ -234,7 +236,9 @@ export default function WorkSection() {
             transition={{ delay: 0.3 }}
           >
             Projects I've
+            <span> </span>
             <span className="gradient-text-stable"> developed</span>
+
           </motion.h2>
           
           <motion.p
