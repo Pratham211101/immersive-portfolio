@@ -39,19 +39,19 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-16 lg:py-12 xl:py-20 px-4 sm:px-6 md:px-12 relative bg-background/80 backdrop-blur-sm">
+    <section id="contact" className="py-20 px-4 sm:px-6 md:px-12 relative bg-background/80 backdrop-blur-sm">
       {/* Background accents */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[700px] md:w-[800px] h-[500px] sm:h-[700px] md:h-[800px] bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-[120px] sm:blur-[150px]" />
 
       <div className="max-w-7xl mx-auto relative" ref={ref}>
         <motion.div
-          className="text-center mb-8 lg:mb-6 xl:mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.p
-            className="text-primary font-medium mb-2 lg:mb-2 xl:mb-4 tracking-widest uppercase text-xs sm:text-sm"
+            className="text-primary font-medium mb-4 tracking-widest uppercase text-sm"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
@@ -60,7 +60,7 @@ export default function ContactSection() {
           </motion.p>
 
           <motion.h2
-            className="font-display text-2xl sm:text-3xl lg:text-2xl xl:text-5xl font-bold mb-3 lg:mb-2 xl:mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
@@ -69,7 +69,7 @@ export default function ContactSection() {
           </motion.h2>
 
           <motion.p
-            className="text-muted-foreground max-w-xl sm:max-w-2xl mx-auto text-sm lg:text-xs xl:text-base"
+            className="text-muted-foreground max-w-xl sm:max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.5 }}
@@ -78,7 +78,7 @@ export default function ContactSection() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <motion.div
             className="space-y-6 sm:space-y-8"
