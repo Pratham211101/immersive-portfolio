@@ -138,20 +138,20 @@ export default function WorkSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="work" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative bg-background/80 backdrop-blur-sm">
+    <section id="work" className="py-12 sm:py-16 lg:py-12 xl:py-32 px-4 sm:px-6 relative bg-background/80 backdrop-blur-sm">
       {/* Background accent */}
       <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-[100px] sm:blur-[150px]" />
       
       <div className="max-w-7xl mx-auto" ref={ref}>
 
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-6 xl:mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.p
-            className="text-primary font-medium mb-4 tracking-widest uppercase text-sm"
+            className="text-primary font-medium mb-2 lg:mb-2 xl:mb-4 tracking-widest uppercase text-xs sm:text-sm"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
@@ -160,7 +160,7 @@ export default function WorkSection() {
           </motion.p>
           
           <motion.h2
-            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+            className="font-display text-2xl sm:text-3xl lg:text-2xl xl:text-5xl font-bold mb-3 lg:mb-2 xl:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
@@ -210,16 +210,16 @@ export default function WorkSection() {
         </motion.div>
 
         {/* add space here */}
-        <div className="mt-24" />
+        <div className="mt-12 lg:mt-8 xl:mt-24" />
 
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-6 xl:mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.p
-            className="text-primary font-medium mb-4 tracking-widest uppercase text-sm"
+            className="text-primary font-medium mb-2 lg:mb-2 xl:mb-4 tracking-widest uppercase text-xs sm:text-sm"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
@@ -228,7 +228,7 @@ export default function WorkSection() {
           </motion.p>
           
           <motion.h2
-            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+            className="font-display text-2xl sm:text-3xl lg:text-2xl xl:text-5xl font-bold mb-3 lg:mb-2 xl:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
@@ -238,7 +238,7 @@ export default function WorkSection() {
           </motion.h2>
           
           <motion.p
-            className="text-muted-foreground max-w-2xl mx-auto"
+            className="text-muted-foreground max-w-2xl mx-auto text-sm lg:text-xs xl:text-base"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.5 }}
