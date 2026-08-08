@@ -265,7 +265,7 @@ export default function WorkSection() {
         </div>
 
         {/* ═══════════════════ Projects Section ═══════════════════ */}
-        <div className="mt-24" />
+        <div id="projects" className="pt-32 -mt-32" />
 
         <motion.div
           className="text-center mb-16"

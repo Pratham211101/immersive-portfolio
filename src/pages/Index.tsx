@@ -5,6 +5,7 @@ import WorkSection from '@/components/WorkSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import Scene3D from '@/components/Scene3D';
+import Dock from '@/components/Dock';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <Dock />
     </div>
   );
 };

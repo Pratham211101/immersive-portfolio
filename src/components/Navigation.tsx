@@ -6,7 +6,7 @@ const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Work', href: '#work' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Projects', href: '#projects' },
 ];
 
 export default function Navigation() {
@@ -29,7 +29,7 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 py-3 sm:py-4"
     >
       <div className="max-w-7xl mx-auto">
-        <div className={`rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300 ${
+        <div className={`rounded-full px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between transition-all duration-300 ${
           scrolled ? 'glass-strong shadow-lg shadow-black/10' : 'glass'
         }`}>
           <motion.a
@@ -47,7 +47,7 @@ export default function Navigation() {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm px-4 py-2 rounded-full hover:bg-card/40"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm px-4 py-1.5 rounded-full hover:bg-card/40"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index + 0.3 }}
@@ -56,10 +56,10 @@ export default function Navigation() {
                 {link.name}
               </motion.a>
             ))}
-            <div className="w-px h-5 bg-border/50 mx-2" />
+            <div className="w-px h-4 bg-border/50 mx-2" />
             <motion.a
               href="#contact"
-              className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-all glow-primary"
+              className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:opacity-90 transition-all glow-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -101,7 +101,7 @@ export default function Navigation() {
                 <div className="h-px bg-border/30 my-2" />
                 <a
                   href="#contact"
-                  className="bg-primary text-primary-foreground px-4 py-3 rounded-xl text-sm font-medium text-center hover:opacity-90 transition-opacity glow-primary"
+                  className="bg-primary text-primary-foreground px-4 py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider text-center hover:opacity-90 transition-opacity glow-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Let's Talk

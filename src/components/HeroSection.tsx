@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Download } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -14,11 +13,9 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-
-
           {/* Profile picture */}
           <motion.div
-            className="relative mx-auto mb-6 w-32 h-32"
+            className="relative mx-auto mb-6 w-28 h-28 sm:w-32 sm:h-32"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -27,12 +24,12 @@ export default function HeroSection() {
             <img
               src="/pic.png"
               alt="Pratham Goswami"
-              className="relative w-32 h-32 rounded-full border-2 border-white/10 shadow-lg object-cover"
+              className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-white/10 shadow-lg object-cover"
             />
           </motion.div>
 
           <motion.h2
-            className="text-2xl md:text-3xl font-semibold mb-2"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -60,69 +57,15 @@ export default function HeroSection() {
           </h1>
 
           <motion.p
-            className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 px-2 leading-relaxed"
+            className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-4 px-2 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            I design and build immersive web experiences that blend creativity
-            with cutting-edge technology. Let's create something extraordinary.
+            Full-stack software engineer building scalable real-time web platforms, IoT monitoring systems, and production-grade applications.
           </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-          >
-            <motion.a
-              href="#work"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all glow-primary text-sm sm:text-base"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="px-6 sm:px-8 py-3 sm:py-4 glass-premium rounded-full font-medium hover:bg-card/60 transition-all text-sm sm:text-base"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in Touch
-            </motion.a>
-            <motion.a
-              href="https://drive.google.com/file/d/17_ibMf8NMPtKc8Ohuz6K2MJbD5LhwnNu/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 sm:px-8 py-3 sm:py-4 glass-premium rounded-full font-medium hover:bg-card/60 transition-all text-sm sm:text-base inline-flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={16} />
-              Resume
-            </motion.a>
-          </motion.div>
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        style={{ zIndex: 10 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <motion.a
-          href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <span className="text-sm">Scroll</span>
-          <ArrowDown size={20} />
-        </motion.a>
-      </motion.div>
     </section>
   );
 }
