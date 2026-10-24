@@ -16,7 +16,7 @@ function DockItem({ href, icon, label, external }: DockItemProps) {
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="relative flex items-center h-10 rounded-full bg-white/[0.05] border border-white/[0.08] backdrop-blur-md text-primary hover:bg-white/[0.12] transition-colors group cursor-pointer overflow-hidden flex-shrink-0"
+      className="group/dock relative flex items-center h-10 rounded-full bg-white/[0.05] border border-white/[0.08] backdrop-blur-md text-primary hover:bg-white/[0.12] transition-colors cursor-pointer overflow-hidden flex-shrink-0"
       whileTap={{ scale: 0.96 }}
     >
       {/* Fixed-size icon container */}
@@ -24,21 +24,12 @@ function DockItem({ href, icon, label, external }: DockItemProps) {
         {icon}
       </div>
 
-      {/* Text slides in via max-width + opacity — no "auto" animation */}
+      {/* Text slides in via max-width + opacity */}
       <div
-        className="overflow-hidden whitespace-nowrap flex items-center transition-all duration-300 ease-out"
-        style={{ maxWidth: 0, opacity: 0, paddingRight: 0 }}
+        className="max-w-0 opacity-0 pr-0 group-hover/dock:max-w-[120px] group-hover/dock:opacity-100 group-hover/dock:pr-3.5 overflow-hidden whitespace-nowrap flex items-center transition-all duration-300 ease-out"
       >
         <span className="text-xs font-medium text-foreground">{label}</span>
       </div>
-
-      <style>{`
-        .group:hover > div:nth-child(2) {
-          max-width: 120px !important;
-          opacity: 1 !important;
-          padding-right: 14px !important;
-        }
-      `}</style>
     </motion.a>
   );
 }
